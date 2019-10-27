@@ -8,10 +8,20 @@ public class Recursion {
 
     private static void printArray(int index, int[] array) {
         if (index == array.length - 1) {
-            System.out.println(array[index]);
+            System.out.println(array[index]); // эта строка повторяется дважды, значит, стоит изменить код
             return;
         }
         System.out.println(array[index]);
         printArray(index + 1, array);
     }
+    
+    /*
+    так оптимальнее
+    private static void printArray(int index, int[] array) {
+        if (index < array.length - 1) {
+            System.out.println(array[index]);
+            printArray(index + 1, array);
+        }
+    }
+    */
 }
