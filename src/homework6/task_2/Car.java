@@ -20,6 +20,7 @@ public class Car {
     }
 
     public void ride() {
+        // carRide == false ->  && carRide
         if (getEngine().isWorking() && carRide == false) {
             carRide = true;
             engine.startEngine();
