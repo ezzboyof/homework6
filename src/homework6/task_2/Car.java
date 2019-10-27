@@ -3,8 +3,8 @@ package homework6.task_2;
 public class Car {
     private Transmission transmission;
     private Engine engine;
-    private boolean carRide = false;
-    private boolean gasPedal = false;
+    private boolean carRide = false; // по умолчанию будет false, можно не присваивать
+    private boolean gasPedal = false; // по умолчанию будет false, можно не присваивать
 
     public Car() {
         this.transmission = new Transmission();
@@ -35,10 +35,11 @@ public class Car {
         System.out.println("Gas pedal depressed");
     }
 
+    // speed -> printSpeed
     public void speed() {
-
-        if (carRide == true) {
+// пустая строка не нужна
+        if (carRide == true) { // if (carRide)
             System.out.println("Speed = " + getTransmission().getNumberOfGear() * 20);
-        } else System.out.println("Speed = 0");
+        } else System.out.println("Speed = 0"); // else {}
     }
 }
